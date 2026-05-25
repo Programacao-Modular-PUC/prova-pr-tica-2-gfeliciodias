@@ -4,17 +4,75 @@
  */
 package pm_prova2_m;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author glbra
  */
 public class PM_Prova2_M {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Veiculo> veiculos = new ArrayList<>();
+        ArrayList<Aluguel> alugueis = new ArrayList<>();
+
+        Carro carro = new Carro(
+                "AAA1111",
+                "Civic",
+                2020,
+                250,
+                50000,
+                StatusVeiculo.DISPONIVEL,
+                4
+        );
+        
+
+        Moto moto = new Moto(
+                "CCC3333",
+                "Bros 160",
+                2008,
+                160,
+                200000,
+                StatusVeiculo.MANUTENCAO,
+                300
+        );
+        
+
+        Van van = new Van(
+                "EEE5555",
+                "Sprinter",
+                2022,
+                450,
+                10000,
+                StatusVeiculo.DISPONIVEL,
+                15
+        );
+       
+
+        veiculos.add(carro);
+        veiculos.add(moto);
+        veiculos.add(van);
+
+        Basico basico = new Basico(
+                "Lucas",
+                3,
+                750,
+                StatusAluguel.ATIVO
+        );
+
+        Premium premium = new Premium(
+                "Mariana",
+                5,
+                2250,
+                StatusAluguel.ATIVO
+        );
+
+        alugueis.add(basico);
+        alugueis.add(premium);
     }
     
 }
